@@ -1,3 +1,3 @@
 <template>
-  <div>content</div>
+  <div><router-link to='/'>content</router-link></div>
 </template>

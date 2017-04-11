@@ -2,7 +2,9 @@
   <div>
     <h1 class="logo">cnodejs Api Test</h1>
     <ul class="list">
-      <li v-for="item in lists" v-text="item.title"></li>
+      <li v-for="item in lists" 
+        v-text="item.title"
+        @click="showDetail(item.id)"></li>
     </ul>
   </div>
 </template>
@@ -23,8 +25,12 @@ export default {
       if (!params) params = {}
       // 我们这里用全局绑定的 $api 方法来获取数据，方便吧~
       v.$api.get('topics', params, function (r) {
+        // console.log(r.data)
         v.lists = r.data
       })
+    },
+    showDetail: function (id) {
+      window.location.href = '#/content'
     }
   }
 }
