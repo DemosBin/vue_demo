@@ -30,7 +30,7 @@ export default {
       })
     },
     showDetail: function (id) {
-      window.location.href = '#/content'
+      window.location.href = '#/content/' + id
     }
   }
 }

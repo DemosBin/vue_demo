@@ -19,7 +19,7 @@ export default [
     component: test
   },
   {
-    path: '/content',
+    path: '/content/:id',
     component: content
   }
   /* {
